@@ -1,6 +1,6 @@
 # Galeria mutelife - Gutenberg block
 
-Automatically generate beautiful galleries with Gutenberg blocks! As seen on [mutelife](https://mutelife.com/).
+Automatically generate beautiful galleries with Gutenberg blocks! As seen on [mutelife.com](https://mutelife.com/).
 
 ---
 
