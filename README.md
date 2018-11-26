@@ -6,7 +6,7 @@ Automatically generate beautiful galleries with Gutenberg blocks! As seen on [mu
 
 ## Supported galleries
 
-Depeding on the quantity of images you select (from 2 to 4) and their image ratios, the corresponding gallery will be created.
+Depending on the quantity of images you select (from 2 to 4) and their image ratios, the corresponding gallery will be created.
 
 **Side-by-side horizontal / side-by-side vertical** (2 or 3 images)
 
