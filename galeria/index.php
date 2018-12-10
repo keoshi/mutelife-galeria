@@ -16,7 +16,7 @@ function mutelife_galeria_css() {
 	wp_enqueue_style(
 		'mutelife-galeria',
 		plugins_url( 'style.css', __FILE__ ),
-		array( 'wp-blocks' ),
+		array( 'wp-editor' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
 	);
 }
