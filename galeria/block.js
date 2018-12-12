@@ -6,6 +6,7 @@ registerBlockType( 'mutelife/galeria', {
 	title: 'mutelife: Galeria',
 	icon: 'format-gallery',
 	category: 'layout',
+	description: 'Automatically generate beautiful galleries.',
 	attributes: {
 		mediaUrls: {
 			type: 'array',
