@@ -108,7 +108,7 @@ registerBlockType( 'mutelife/galeria', {
 						onSelect: onSelectImages,
 						multiple: true,
 					} ),
-				el( 'div', { className: 'galeria photos' },
+				el( 'div', { className: 'mutelife-galeria photos' },
 					attributes.mediaUrls && attributes.mediaUrls[0] && 
 						el( 'div', { className: classNames[0] },
 							el( 'img', { src: attributes.mediaUrls[0], className: 'unveil' } )
@@ -178,7 +178,7 @@ registerBlockType( 'mutelife/galeria', {
 
 		return (
 			el( 'div', { className: props.className },
-				el( 'div', { className: 'galeria photos' },
+				el( 'div', { className: 'mutelife-galeria photos' },
 					attributes.mediaUrls && attributes.mediaUrls[0] && 
 						el( 'div', { className: classNames[0] },
 							el( 'img', { src: attributes.mediaUrls[0], className: 'unveil' } )
