@@ -10,7 +10,7 @@ Depending on the quantity of images you select (from 2 to 4) and their image rat
 
 **Side-by-side horizontal / side-by-side vertical** (2 or 3 images)
 
-![image](https://user-images.githubusercontent.com/390760/49022424-c05f8100-f18c-11e8-9f8e-2ed2f7be733e.png)
+![image](https://user-images.githubusercontent.com/390760/50014206-2e90aa00-ffbb-11e8-83e2-d29d711b3a6a.png)
 
 **Horizontal + vertical / vertical + horizontal**
 
