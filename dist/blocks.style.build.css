@@ -1,0 +1,82 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * mutelife Galeria styles
+ */
+.mutelife-galeria {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1%; }
+
+.mutelife-galeria .mutelife-image {
+  max-width: 100%;
+  width: 50%;
+  text-align: center; }
+
+.mutelife-galeria .mutelife-image:last-of-type,
+.mutelife-galeria .mutelife-image.middle {
+  margin-left: 1%; }
+
+.mutelife-galeria .mutelife-image.terco {
+  -ms-flex: 1;
+      flex: 1;
+  width: auto; }
+
+.mutelife-galeria .mutelife-image.tercos {
+  -ms-flex: 2.25;
+      flex: 2.25;
+  width: auto; }
+
+.mutelife-galeria .mutelife-image.fortico-vertical {
+  -ms-flex: 1.364;
+      flex: 1.364;
+  width: auto; }
+
+.mutelife-galeria .fortico-horizontais {
+  -ms-flex: 1;
+      flex: 1;
+  width: auto;
+  margin-left: 1%; }
+
+.mutelife-galeria .mutelife-image.fortico-horizontal {
+  -ms-flex: 1;
+      flex: 1;
+  width: auto;
+  margin-bottom: calc( ( 2 - 1.364 ) * 2% + 1%);
+  /* Hacky-hack way to get the right value inside flex container */ }
+
+.mutelife-galeria .mutelife-image.fortico-horizontal:last-of-type {
+  margin-left: 0;
+  margin-bottom: 0; }
+
+.mutelife-galeria .mutelife-image img {
+  display: block;
+  z-index: 1;
+  position: relative;
+  width: 100%; }
+
+.mutelife-galeria .terco + .tercos,
+.mutelife-galeria .tercos + .terco {
+  margin-bottom: 0; }
+
+@media (max-width: 48em) {
+  .mutelife-galeria {
+    display: block;
+    margin-bottom: 0; }
+  .mutelife-galeria .mutelife-image {
+    width: auto; }
+  .mutelife-galeria .mutelife-image:last-of-type,
+  .mutelife-galeria .mutelife-image.middle,
+  .mutelife-galeria .fortico-horizontais {
+    margin-left: 0; }
+  .mutelife-galeria .mutelife-image,
+  .mutelife-galeria .mutelife-image.fortico-horizontal,
+  .mutelife-galeria .terco + .tercos,
+  .mutelife-galeria .tercos + .terco {
+    margin-bottom: 1%; } }
