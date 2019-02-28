@@ -1,0 +1,96 @@
+/**
+ * #.# Styles
+ *
+ * mutelife Galeria styles
+ */
+
+.mutelife-galeria {
+	display: flex;
+	margin-bottom: 1%;
+
+	.mutelife-image {
+		max-width: 100%;
+		width: 50%;
+		text-align: center;
+
+		&:last-of-type,
+		&.middle {
+			margin-left: 1%;
+		}
+
+		&.terco {
+			flex: 1;
+			width: auto;
+		}
+
+		&.tercos {
+			flex: 2.25;
+			width: auto;
+		}
+
+		&.fortico-vertical {
+			flex: 1.364;
+			width: auto;
+		}
+
+		&.fortico-horizontal {
+			flex: 1;
+			width: auto;
+			margin-bottom: calc( ( 2 - 1.364 ) * 2% + 1% ); /* Hacky-hack way to get the right value inside flex container */
+
+			&:last-of-type {
+				margin-left: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		img {
+			display: block;
+			z-index: 1;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	.fortico-horizontais {
+		flex: 1;
+		width: auto;
+		margin-left: 1%;
+	}
+
+	.terco + .tercos,
+	.tercos + .terco {
+		margin-bottom: 0;
+	}
+}
+
+@media ( max-width: 48em ) {
+
+	.mutelife-galeria {
+		display: block;
+		margin-bottom: 0;
+
+		.mutelife-image {
+			width: auto;
+			margin-bottom: 1%;
+
+			&:last-of-type,
+			&.middle {
+				margin-left: 0;
+			}
+
+			&.fortico-horizontal {
+				margin-bottom: 1%;
+			}
+		}
+
+		.fortico-horizontais {
+			margin-left: 0;
+		}
+
+		.terco + .tercos,
+		.tercos + .terco {
+			margin-bottom: 1%;
+		}
+	}
+}
