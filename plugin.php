@@ -4,12 +4,19 @@
  * Plugin Name: mutelife Galeria
  * Plugin URI: https://mutelife.com/
  * Description: Automatically generate beautiful galleries with Gutenberg blocks!
- * Version: 0.1.0
+ * Version: 2.0
  * Author: Filipe Varela
+ * Author URI: https://keoshi.com/
  *
  * @package mutelife-galeria
  */
 
-defined( 'ABSPATH' ) || exit;
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-include 'galeria/index.php';
+/**
+ * Block Initializer.
+ */
+require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
