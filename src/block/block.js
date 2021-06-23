@@ -32,6 +32,11 @@ registerBlockType( 'mutelife/galeria', {
 		},
 	},
 
+	supports: {
+		align: ['wide','full'],
+		default: 'wide'
+	},
+
 	/**
 	 * Edit function
 	 */
