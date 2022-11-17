@@ -4,7 +4,7 @@
  * Plugin Name: mutelife Galeria
  * Plugin URI: https://mutelife.com/
  * Description: Automatically generate beautiful galleries with Gutenberg blocks!
- * Version: 2.0
+ * Version: 2.1
  * Author: Filipe Varela
  * Author URI: https://keoshi.com/
  *
