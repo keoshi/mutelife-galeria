@@ -1,0 +1,11 @@
+/**
+ * mutelife Galeria — editor-only tweaks.
+ *
+ * Front-end + editor styles live in style.scss. Anything in here is for
+ * the block editor canvas only.
+ */
+
+.wp-block-mutelife-galeria.layout-auto figure.mutelife-image {
+	/* Prevent the editor's default figure margins from breaking the row. */
+	margin: 0;
+}
