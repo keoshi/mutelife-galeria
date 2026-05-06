@@ -4,7 +4,6 @@
 	"description": "Automatically generate beautiful galleries with Gutenberg blocks!",
 	"author": "Filipe Varela <https://keoshi.com/>",
 	"license": "GPL-2.0-or-later",
-	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build --blocks-manifest",
 		"format": "wp-scripts format",
