@@ -1,0 +1,173 @@
+/**
+ * mutelife Galeria — front-end styles
+ *
+ * Two layers of selectors:
+ *  1. New v3 markup: .wp-block-mutelife-galeria.layout-auto > .mutelife-image
+ *  2. Legacy v2 markup (still in posts that haven't been re-edited):
+ *     .wp-block-mutelife-galeria > .mutelife-galeria.photos > .mutelife-image
+ *     plus the fortico-vertical / fortico-horizontal / fortico-horizontais
+ *     / tercos / terco / middle / unveil class names from cgb-scripts era.
+ */
+
+$gap-h: var( --wp--custom--gap--horizontal, 1% );
+$gap-v: var( --wp--custom--gap--vertical, 1% );
+$mobile: 48em;
+
+/* ----------------------------------------------------------------------------
+ * v3 — uniform-height auto layout
+ * ------------------------------------------------------------------------- */
+
+.wp-block-mutelife-galeria.layout-auto {
+	display: flex;
+	flex-direction: row;
+	gap: $gap-h;
+	align-items: stretch;
+
+	.mutelife-image {
+		flex-shrink: 1;
+		flex-basis: 0;
+		min-width: 0;
+		margin: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media ( max-width: #{$mobile} ) {
+		flex-direction: column;
+		gap: $gap-v;
+
+		.mutelife-image img {
+			height: auto;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------
+ * v3 — fortico layout (1 tall + 3 stacked)
+ * ------------------------------------------------------------------------- */
+
+.wp-block-mutelife-galeria.layout-fortico {
+	display: flex;
+	flex-direction: row;
+	gap: $gap-h;
+	align-items: stretch;
+
+	> .mutelife-image,
+	> .fortico-stack > .mutelife-image {
+		margin: 0;
+		min-width: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	> .mutelife-image.fortico-vertical {
+		flex: 1.425 1 0;
+	}
+
+	> .fortico-stack {
+		flex: 1 1 0;
+		display: flex;
+		flex-direction: column;
+		gap: $gap-v;
+		min-width: 0;
+
+		> .mutelife-image {
+			flex: 1 1 0;
+			min-height: 0;
+		}
+	}
+
+	@media ( max-width: #{$mobile} ) {
+		flex-direction: column;
+		gap: $gap-v;
+
+		> .fortico-stack > .mutelife-image {
+			flex: 0 0 auto;
+
+			img {
+				height: auto;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------
+ * v2 — legacy markup, kept so old posts render until they're re-edited
+ * ------------------------------------------------------------------------- */
+
+.wp-block-mutelife-galeria .mutelife-galeria {
+	display: flex;
+	gap: $gap-h;
+
+	.mutelife-image {
+		max-width: 100%;
+		width: 50%;
+		text-align: center;
+
+		&.terco {
+			flex: 1;
+			width: auto;
+		}
+
+		&.tercos {
+			flex: 2.25;
+			width: auto;
+		}
+
+		&.fortico-vertical {
+			flex: 1.425;
+			width: auto;
+		}
+
+		&.fortico-horizontal {
+			flex: 1;
+			width: auto;
+
+			&:last-of-type {
+				margin-left: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		img {
+			display: block;
+			z-index: 1;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	.fortico-horizontais {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		width: auto;
+		gap: $gap-v;
+	}
+
+	.terco + .tercos,
+	.tercos + .terco {
+		margin-bottom: 0;
+	}
+}
+
+@media ( max-width: #{$mobile} ) {
+
+	.wp-block-mutelife-galeria .mutelife-galeria {
+		flex-direction: column;
+
+		.mutelife-image {
+			width: auto;
+		}
+	}
+}
